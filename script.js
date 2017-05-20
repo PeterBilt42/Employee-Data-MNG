@@ -23,6 +23,11 @@ $('#submit').on('click', function(event){
 	var startDate = $('#start-date').val().trim();
 	var monthlyRate = $('#monthly-rate').val();
 
-	// database.ref()
+	database.ref().push({
+		employeeName: employeeName,
+		role: role,
+		startDate: startDate,
+		monthlyRate: monthlyRate
+	});
 });
 
