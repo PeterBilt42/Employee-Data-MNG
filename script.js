@@ -4,15 +4,25 @@ var config = {
 	apiKey: "AIzaSyAvtuzDqSlZpMovTcdiEo2apokzdvo34OI",
 	authDomain: "employee-data-management-aa852.firebaseapp.com",
 	databaseURL: "https://employee-data-management-aa852.firebaseio.com",
-	projectId: "employee-data-management-aa852",
-	storageBucket: "employee-data-management-aa852.appspot.com",
-	messagingSenderId: "349290059912"
+	// projectId: "employee-data-management-aa852",
+	storageBucket: "employee-data-management-aa852.appspot.com"
+	// messagingSenderId: "349290059912"
 };
 firebase.initializeApp(config);
 
 var database = firebase.database();
 
+database.ref().on('child_added', function(snapshot){
+	console.log(snapshot.val().employeeName);
 
+	var row = $('<tr>');
+	var nameCell = $('<td>').html(snapshot.val().employeeName);
+
+	row.append(nameCell);
+
+
+	$('#employee-table tr:last').after(row);
+});
 
 
 $('#submit').on('click', function(event){
