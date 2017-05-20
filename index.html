@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Employee Data Management</title>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Style Sheets: 1) Bootstrap, 2) Custom -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <!-- Firebase Reference -->
+  </head>
+  <body>
+    <div class="container">
+      <div class= "jumbotron text-center">
+        <h1>Employee Data Management</h1>
+        <p>A Comprehensive Directory of Employee Billable Hours</p>
+      </div>
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3>Current Employees</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table">
+
+              <thead>
+               <tr>
+                 <th>Employee Name</th>
+                 <th>Role</th>
+                 <th>Start Date</th>
+                 <th>Months Worked</th>
+                 <th>Monthly Rate ($)</th>
+                 <th>Total Billed ($)</th>
+               </tr>
+             </thead>
+
+
+
+            
+
+
+          </table>
+          
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3>Add Employees</h3>
+        </div>
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="employeeName">Employee Name</label>
+              <input type="text" class="form-control" id="employee-name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="role">Role</label>
+              <input type="text" class="form-control" id="role" placeholder="Role">
+            </div>
+            <div class="form-group">
+              <label for="starDate">Start Date (ex: 01/01/98)</label>
+              <input type="text" class="form-control" id="start-date" placeholder="DD/MM/YY">
+            </div>
+            <div class="form-group">
+              <label for="monthlyRate">Monthly Rate</label>
+              <input type="number" class="form-control" id="monthly-rate" placeholder="Ex: 1000">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+          </form>
+          
+        </div>
+      </div>
+      
+    </div> <!--End of Container-->
+
+
+<script type="text/javascript">
+  
+$('#submit').on('click',function(event){
+  event.preventDefault();
+});
+
+
+
+
+</script>
+    
+  </body>
+</html>
