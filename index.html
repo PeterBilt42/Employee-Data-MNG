@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Link to the jQuery Library -->
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <!-- Firebase Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
   </head>
   <body>
     <div class="container">
-      <div class= "jumbotron text-center">
+      <div class= "jumbotron text-center" style="background-color: #c0dddd; color: #444444">
         <h1>Employee Data Management</h1>
         <p>A Comprehensive Directory of Employee Billable Hours</p>
       </div>
@@ -61,8 +62,8 @@
               <input type="text" class="form-control" id="role" placeholder="Role">
             </div>
             <div class="form-group">
-              <label for="starDate">Start Date (ex: 01/01/98)</label>
-              <input type="text" class="form-control" id="start-date" placeholder="DD/MM/YY">
+              <label for="starDate">Start Date (ex: 01/01/1998)</label>
+              <input type="text" class="form-control" id="start-date" placeholder="MM/DD/YYYY">
             </div>
             <div class="form-group">
               <label for="monthlyRate">Monthly Rate</label>
@@ -77,6 +78,8 @@
     </div> <!--End of Container-->
 
   <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+  <script src="method1.js"></script>
+  <script src="method2.js"></script>
   <script src="script.js"></script>
 
   </body>
